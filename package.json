@@ -1,17 +1,38 @@
 {
   "name": "grp-react-ui",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "一个react组件库",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.umd.js",
+  "typings": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/Mr-Grp/grp-react-ui"
+  },
   "scripts": {
     "dev": "npm run start",
     "start": "webpack-dev-server --config ./build/webpack.dev.js",
+    "lint": "eslint --ext js,ts,tsx src",
     "test": "jest --watch",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage --no-cache",
+    "test:prod": "npm run lint && npm run test:coverage",
+    "build:lib": "webpack --config ./build/webpack.build.js",
+    "build:ts": "tsc -p tsconfig.build.json",
+    "build:multiEntry": "webpack  --config ./build/webpack.multiEntry.js",
+    "build": "rm -rf dist && rm -rf lib && npm run build:lib && npm run build:ts && npm run build:multiEntry",
+    "prepub": "npm run test:prod && npm run build",
+    "pub": "sh release.sh"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "grp",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
   "devDependencies": {
     "@babel/core": "^7.16.5",
     "@babel/plugin-proposal-decorators": "^7.16.5",
@@ -30,6 +51,7 @@
     "core-js": "^2.6.12",
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.1",
+    "css-minimizer-webpack-plugin": "^3.3.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.6",
     "eslint": "^7.32.0",
@@ -46,6 +68,7 @@
     "jest-watch-typeahead": "^0.6.5",
     "less": "^4.1.2",
     "less-loader": "^10.2.0",
+    "mini-css-extract-plugin": "^2.4.5",
     "postcss-loader": "^6.2.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
