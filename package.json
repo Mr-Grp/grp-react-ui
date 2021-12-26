@@ -10,7 +10,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/Mr-Grp/grp-react-ui"
+    "url": "https://github.com/Mr-Grp/grp-react-ui/tree/master"
   },
   "scripts": {
     "dev": "npm run start",
