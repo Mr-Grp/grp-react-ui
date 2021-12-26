@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Progress 测试 测试完成，保存快照 1`] = `
+<div
+  className="progress-bar"
+  data-test="progress"
+>
+  <div
+    className="progress-bar-outer"
+    data-test="progress-outer"
+    style={
+      Object {
+        "height": "15px",
+      }
+    }
+  >
+    <div
+      className="progress-bar-inner color-primary"
+      data-test="progress-inner"
+      style={
+        Object {
+          "width": "10%",
+        }
+      }
+    />
+  </div>
+</div>
+`;

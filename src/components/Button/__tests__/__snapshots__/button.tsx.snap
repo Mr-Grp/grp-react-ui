@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button 测试 测试完成，保存快照 1`] = `
+<button
+  className="btn btn-default"
+  data-test="button"
+  disabled={false}
+>
+  Test
+</button>
+`;

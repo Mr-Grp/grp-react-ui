@@ -1,12 +1,7 @@
-import React from 'react';
-import './index.less';
+import Button from './components/Button';
+import Progress from './components/Progress';
 
-const App = () => {
-  return (
-    <div className="test">
-      this is a test
-    </div>
-  );
+export {
+  Button,
+  Progress,
 };
-
-export default App;
