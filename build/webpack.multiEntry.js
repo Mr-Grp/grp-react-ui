@@ -5,6 +5,7 @@ const { ProgressPlugin } = require('webpack');
 const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const os = require('os');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const config = {
   mode: 'production',
@@ -28,6 +29,14 @@ const config = {
   optimization: {
     minimize: true,
     minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+        terserOptions: {
+          compress: {
+            pure_funcs: ['console.log'],
+          },
+        },
+      }),
       new CssMinimizerPlugin(),
     ],
   },
