@@ -14,8 +14,8 @@ then
   npm version $VERSION --message "[release] $VERSION"
   git push origin master
 
-  npm config set registry https://registry.npmjs.org
   # publish
+  npm config set registry https://registry.npmjs.org
   npm publish
   npm config set registry https://registry.npm.taobao.org
 fi
