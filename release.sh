@@ -16,6 +16,7 @@ then
 
   # publish
   npm config set registry https://registry.npmjs.org
+  echo "Releasing..."
   npm publish
   npm config set registry https://registry.npm.taobao.org
 fi

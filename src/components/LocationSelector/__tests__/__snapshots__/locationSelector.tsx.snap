@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LocationSelector 测试 测试完成，保存快照 1`] = `
+<div
+  className="g-location-selector "
+  style={Object {}}
+>
+  <div
+    className="g-location-selector-title"
+  >
+    地区选择器
+  </div>
+  <div
+    className="g-location"
+  />
+</div>
+`;

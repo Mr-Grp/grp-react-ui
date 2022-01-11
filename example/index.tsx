@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Button, Progress } from '../src';
+import { Button, Progress, LocationSelector } from '../src';
 
 const App = () => {
   return (
     <div>
-      <Button size="lg" btnType="danger" disabled onClick={() => console.log(131231)}>button</Button>
+      <Button size="lg" btnType="danger" disabled onClick={() => console.log('g')}>button</Button>
       <Progress percent={89} theme="primary" />
+      <LocationSelector />
     </div>
   );
 };
